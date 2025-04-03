@@ -155,7 +155,7 @@ const galleryImages = [
     size: 'medium'
   },
   {
-    src: '/public/images/gallery/Update Comming.gif',
+    src: '/images/gallery/Update Comming.gif',
     alt: 'Updates',
     size: 'medium'
   }
