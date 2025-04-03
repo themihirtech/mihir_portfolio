@@ -9,148 +9,148 @@ import FooterDock from '@/components/FooterDock';
 // Gallery data - easier to add new photos
 const galleryImages = [
   {
-    src: '/public/images/gallery/Burger 2.png',
+    src: '/images/gallery/Burger 2.png',
     alt: 'Special food',
     size: 'large' // large image spanning multiple columns
   },
   {
-    src: '/public/images/gallery/Burger Special.png',
+    src: '/images/gallery/Burger Special.png',
     alt: 'Burger at 99',
     size: 'small' // small image taking up less space
   },
   {
-    src: '/public/images/gallery/Business man businesscard.png',
+    src: '/images/gallery/Business man businesscard.png',
     alt: 'Businesscard image',
     size: 'medium' // medium size image
   },
   {
-    src: '/public/images/gallery/Buy home 1.png',
+    src: '/images/gallery/Buy home 1.png',
     alt: 'Buy home image',
     size: 'small' // small image
   },
   {
-    src: '/public/images/gallery/Fast Delivery.png',
+    src: '/images/gallery/Fast Delivery.png',
     alt: 'Fast Delivery image',
     size: 'medium' // medium size image
   },
   {
-    src: '/public/images/gallery/Buy home 2.png',
+    src: '/images/gallery/Buy home 2.png',
     alt: 'Buy home 2',
     size: 'large' // large image spanning multiple columns
   },
   {
-    src: '/public/images/gallery/Buy home 3.png',
+    src: '/images/gallery/Buy home 3.png',
     alt: 'Buy home 3',
     size: 'small' // small image
   },
   {
-    src: '/public/images/gallery/Fertilizer banner.png',
+    src: '/images/gallery/Fertilizer banner.png',
     alt: 'Fertilizer banner',
     size: 'medium' // medium size image
   },
   // Additional demo images using placeholders
   {
-    src: '/public/images/gallery/Fitness banner.png',
+    src: '/images/gallery/Fitness banner.png',
     alt: 'Fitness banner',
     size: 'large'
   },
   {
-    src: '/public/images/gallery/Fried Chicken.png',
+    src: '/images/gallery/Fried Chicken.png',
     alt: 'Fried Chicken',
     size: 'large'
   },
   {
-    src: '/public/images/gallery/Hairing 1.png',
+    src: '/images/gallery/Hairing 1.png',
     alt: 'Hairing 1',
     size: 'medium'
   },
   {
-    src: '/public/images/gallery/Hairing 2.png',
+    src: '/images/gallery/Hairing 2.png',
     alt: 'Hairing 2',
     size: 'medium'
   },
   {
-    src: '/public/images/gallery/Hairing 3.png',
+    src: '/images/gallery/Hairing 3.png',
     alt: 'Hairing 3',
     size: 'medium'
   },
   {
-    src: '/public/images/gallery/Hydroponic solution banner.png',
+    src: '/images/gallery/Hydroponic solution banner.png',
     alt: 'Hydroponic solution',
     size: 'large'
   },
   {
-    src: '/public/images/gallery/jewellery banner.png',
+    src: '/images/gallery/jewellery banner.png',
     alt: 'Jewellery banner',
     size: 'large'
   },
   {
-    src: '/public/images/gallery/Location logo.png',
+    src: '/images/gallery/Location logo.png',
     alt: 'Company logo',
     size: 'small'
   },
   {
-    src: '/public/images/gallery/M logo.png',
+    src: '/images/gallery/M logo.png',
     alt: 'Company logo',
     size: 'medium'
   },
   {
-    src: '/public/images/gallery/Modern Food Menu.gif',
+    src: '/images/gallery/Modern Food Menu.gif',
     alt: 'Modern Food Menu',
     size: 'medium'
   },
   {
-    src: '/public/images/gallery/My mart logo.png',
+    src: '/images/gallery/My mart logo.png',
     alt: 'mart logo',
     size: 'small'
   },
   {
-    src: '/public/images/gallery/Personal trainer businesscard.png',
+    src: '/images/gallery/Personal trainer businesscard.png',
     alt: 'businesscard 1',
     size: 'small'
   },
   {
-    src: '/public/images/gallery/royal golden logo.jpeg',
+    src: '/images/gallery/royal golden logo.jpeg',
     alt: 'royal gold logo',
     size: 'medium'
   },
   {
-    src: '/public/images/gallery/Travel businesscard.png',
+    src: '/images/gallery/Travel businesscard.png',
     alt: 'Travel businesscard',
     size: 'small'
   },
   {
-    src: '/public/images/gallery/watch banner.png',
+    src: '/images/gallery/watch banner.png',
     alt: 'watch banner',
     size: 'large'
   },
   {
-    src: '/public/images/gallery/Boat Photography.jpeg',
+    src: '/images/gallery/Boat Photography.jpeg',
     alt: 'Boat Photography',
     size: 'medium'
   },
   {
-    src: '/public/images/gallery/Photography With Bike.jpg',
+    src: '/images/gallery/Photography With Bike.jpg',
     alt: 'Photography With Bike',
     size: 'small'
   },
   {
-    src: '/public/images/gallery/Moon Photography.jpeg',
+    src: '/images/gallery/Moon Photography.jpeg',
     alt: 'Moon Photography',
     size: 'medium'
   },
   {
-    src: '/public/images/gallery/Fighing Photography.jpg',
+    src: '/images/gallery/Fighing Photography.jpg',
     alt: 'Fighing Photography',
     size: 'large'
   },
   {
-    src: '/public/images/gallery/Victoriya Photography.jpeg',
+    src: '/images/gallery/Victoriya Photography.jpeg',
     alt: 'Victoriya Memorial',
     size: 'medium'
   },
   {
-    src: '/public/images/gallery/Ocian morning Photography.jpeg',
+    src: '/images/gallery/Ocian morning Photography.jpeg',
     alt: 'Morningn sky',
     size: 'medium'
   },

@@ -25,7 +25,7 @@ const FooterDock = () => {
 
   // Function to handle resume download
   const handleDownloadResume = () => {
-    const resumeUrl = "/public/images/Resume/Mihir_Mondal_CV.pdf";
+    const resumeUrl = "/images/Resume/Mihir_Mondal_CV.pdf";
     window.open(resumeUrl, '_blank');
   };
 

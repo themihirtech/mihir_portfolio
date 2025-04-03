@@ -9,7 +9,7 @@ const Resume = () => {
 
   const handleDownload = () => {
     const link = document.createElement('a');
-    link.href = '/public/images/Resume/Mihir_Mondal_CV.pdf';
+    link.href = '/images/Resume/Mihir_Mondal_CV.pdf';
     link.download = 'Mihir_Mondal_CV.pdf';
     document.body.appendChild(link);
     link.click();
@@ -37,7 +37,7 @@ const Resume = () => {
           <div className="bg-white dark:bg-card rounded-lg shadow-lg p-8 mb-8">
             <div className="aspect-[8.5/11] bg-gray-100 dark:bg-gray-800 rounded-lg">
               <iframe 
-                src="/public/images/Resume/Mihir_Mondal_CV.pdf"
+                src="/images/Resume/Mihir_Mondal_CV.pdf"
                 className="w-full h-full rounded-lg"
                 title="Resume"
               />

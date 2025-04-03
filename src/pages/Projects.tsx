@@ -12,7 +12,7 @@ const projectsData = [
   {
     title: "Fitness App",
     description: "A mobile app for tracking workouts and nutrition",
-    videoUrl: "/public/images/Project Video/Fat 2 Fit Fitness app.mp4",
+    videoUrl: "/images/Project Video/Fat 2 Fit Fitness app.mp4",
     thumbnail: "/images/thumbnail/fitness-app.png",
     tags: ["Figma", "Premiere Pro", "After Effact"],
     github: "https://dribbble.com/mihirmondal"
@@ -20,7 +20,7 @@ const projectsData = [
   {
     title: "E-commerce Platform",
     description: "Full-stack shopping platform with real-time inventory",
-    videoUrl: "/public/images/Project Video/My Mart App.mp4",
+    videoUrl: "/images/Project Video/My Mart App.mp4",
     thumbnail: "/images/thumbnail/ecommerce.png",
     tags: ["Figma", "Premiere Pro", "After Effact"],
     github: "https://www.behance.net/mihirmondal1"
@@ -28,7 +28,7 @@ const projectsData = [
   {
     title: "Money Transfer app",
     description: "Cross-platform Money Transfer app, you can Send Money with Ease: Anytime, Anywhere",
-    videoUrl: "/public/images/Project Video/Tez Cash App.mp4",
+    videoUrl: "/images/Project Video/Tez Cash App.mp4",
     thumbnail: "/images/thumbnail/social-media.png",
     tags: ["Figma", "Premiere Pro", "After Effact"],
     github: "https://dribbble.com/mihirmondal"
@@ -36,7 +36,7 @@ const projectsData = [
   {
     title: "Food delivery App",
     description: "A mobile application that allows users to browse restaurant menus, place orders, and have food delivered to their location",
-    videoUrl: "/public/images/Project Video/Fresh Food App.mp4",
+    videoUrl: "/images/Project Video/Fresh Food App.mp4",
     thumbnail: "/images/thumbnail/ai-generator.png",
     tags: ["Figma", "Premiere Pro", "After Effact"],
     github: "https://www.behance.net/mihirmondal1"
@@ -44,7 +44,7 @@ const projectsData = [
   {
     title: "Portfolio Website",
     description: "Personal portfolio website with modern design",
-    videoUrl: "/public/images/Project Video/loading Screen 1.mp4",
+    videoUrl: "/images/Project Video/loading Screen 1.mp4",
     thumbnail: "/images/thumbnail/fitness-app.png",
     tags: ["Figma", "Premiere Pro", "After Effact"],
     github: "https://dribbble.com/mihirmondal"
@@ -52,7 +52,7 @@ const projectsData = [
   {
     title: "Weather App",
     description: "Real-time weather tracking application",
-    videoUrl: "/public/images/Project Video/loading Screen 2.mp4",
+    videoUrl: "/images/Project Video/loading Screen 2.mp4",
     thumbnail: "/images/thumbnail/ecommerce.png",
     tags: ["Figma", "Premiere Pro", "After Effact"],
     github: "https://github.com"
@@ -60,7 +60,7 @@ const projectsData = [
   {
     title: "Task Manager",
     description: "Collaborative task management platform",
-    videoUrl: "/public/images/Project Video/loading Screen 3.mp4",
+    videoUrl: "/images/Project Video/loading Screen 3.mp4",
     thumbnail: "/images/thumbnail/social-media.png",
     tags: ["Vue.js", "Firebase", "Vuex"],
     github: "https://github.com"
@@ -68,7 +68,7 @@ const projectsData = [
   {
     title: "Crypto Tracker",
     description: "Cryptocurrency price tracking dashboard",
-    videoUrl: "/public/images/Project Video/loading Screen 4.mp4",
+    videoUrl: "/images/Project Video/loading Screen 4.mp4",
     thumbnail: "/images/thumbnail/ai-generator.png",
     tags: ["React", "CryptoCompare API"],
     github: "https://github.com"
@@ -76,7 +76,7 @@ const projectsData = [
   {
     title: "Blog Platform",
     description: "Full-stack blogging platform with CMS",
-    videoUrl: "/public/images/Project Video/loading Screen 5.mp4",
+    videoUrl: "/images/Project Video/loading Screen 5.mp4",
     thumbnail: "/images/thumbnail/fitness-app.png",
     tags: ["Next.js", "Strapi", "PostgreSQL"],
     github: "https://github.com"

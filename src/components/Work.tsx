@@ -9,33 +9,33 @@ const featuredProjects = [
   {
     title: "Fitness App",
     description: "A mobile app for tracking workouts and nutrition",
-    videoUrl: "/public/images/Project Video/Fat 2 Fit Fitness app.mp4",
+    videoUrl: "/images/Project Video/Fat 2 Fit Fitness app.mp4",
     thumbnail: "/images/thumbnail/fitness-app.png",
-    tags: ["React Native", "Firebase", "Redux"],
+    tags: ["Figma", "Premiere Pro", "After Effact"],
     externalLink: "https://dribbble.com/mihirmondal"
   },
   {
     title: "E-commerce Platform",
     description: "Full-stack shopping platform with real-time inventory",
-    videoUrl: "/public/images/Project Video/My Mart App.mp4",
+    videoUrl: "/images/Project Video/My Mart App.mp4",
     thumbnail: "/images/thumbnail/ecommerce.png",
-    tags: ["React", "Node.js", "MongoDB"],
+    tags: ["Figma", "Premiere Pro", "After Effact"],
     externalLink: "https://www.behance.net/mihirmondal1"
   },
   {
     title: "Money Transfer app",
     description: "Cross-platform Money Transfer app, you can Send Money with Ease: Anytime, Anywhere",
-    videoUrl: "/public/images/Project Video/Tez Cash App.mp4",
+    videoUrl: "/images/Project Video/Tez Cash App.mp4",
     thumbnail: "/images/thumbnail/social-media.png",
-    tags: ["Flutter", "Firebase", "GetX"],
+    tags: ["Figma", "Premiere Pro", "After Effact"],
     externalLink: "https://www.behance.net/mihirmondal1"
   },
   {
     title: "Food delivery App",
     description: "A mobile application that allows users to browse restaurant menus, place orders, and have food delivered to their location",
-    videoUrl: "/public/images/Project Video/Fresh Food App.mp4",
+    videoUrl: "/images/Project Video/Fresh Food App.mp4",
     thumbnail: "/images/thumbnail/ai-generator.png",
-    tags: ["Python", "TensorFlow", "React"],
+    tags: ["Figma", "Premiere Pro", "After Effact"],
     externalLink: "https://dribbble.com/mihirmondal"
   }
 ];

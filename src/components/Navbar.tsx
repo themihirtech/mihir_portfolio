@@ -60,7 +60,7 @@ const Navbar = () => {
       <div className="rounded-full bg-transparent px-[24px]">
         <div className="flex items-center justify-between h-16 rounded-full bg-inherit">
           <div className="flex items-center space-x-4">
-            <img alt="Logo" className="w-10 h-10 rounded-full ring-2 ring-primary/20 hover:ring-primary/50 transition-all cursor-pointer" onClick={handleHomeClick} src="/public/lovable-uploads/Mlogo.webp" />
+            <img alt="Logo" className="w-10 h-10 rounded-full ring-2 ring-primary/20 hover:ring-primary/50 transition-all cursor-pointer" onClick={handleHomeClick} src="/lovable-uploads/Mlogo.webp" />
             <span className="text-lg font-semibold text-gray-900 dark:text-white cursor-pointer" onClick={handleHomeClick}>
               Mihir Mondal
             </span>
