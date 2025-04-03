@@ -1,0 +1,280 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --primary: 262 99% 64%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --border: 220 13% 91%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --primary: 262 99% 64%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+  }
+
+  body {
+    @apply bg-white dark:bg-gray-900 text-gray-900 dark:text-white cursor-none;
+  }
+  
+  a, button, [role="button"], .clickable {
+    @apply cursor-none;
+  }
+}
+
+/* Sky background effects */
+.night-sky {
+  @apply fixed inset-0 pointer-events-none overflow-hidden z-[-1];
+  background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
+}
+
+:root[class~="light"] .night-sky {
+  background: linear-gradient(180deg, #87CEEB 0%, #E0F6FF 100%);
+}
+
+.stars {
+  @apply absolute inset-0;
+  background-image: radial-gradient(2px 2px at 20px 30px, #eee, rgba(0,0,0,0)),
+                    radial-gradient(2px 2px at 40px 70px, #fff, rgba(0,0,0,0)),
+                    radial-gradient(2px 2px at 50px 160px, #ddd, rgba(0,0,0,0)),
+                    radial-gradient(2px 2px at 90px 40px, #fff, rgba(0,0,0,0)),
+                    radial-gradient(2px 2px at 130px 80px, #fff, rgba(0,0,0,0));
+  background-repeat: repeat;
+  background-size: 200px 200px;
+  opacity: 0;
+  animation: twinkle 5s ease-in-out infinite;
+}
+
+:root[class~="light"] .stars {
+  background-image: radial-gradient(2px 2px at 20px 30px, #5b97e5, rgba(0,0,0,0)),
+                    radial-gradient(2px 2px at 40px 70px, #4285f4, rgba(0,0,0,0)),
+                    radial-gradient(2px 2px at 50px 160px, #6fa8dc, rgba(0,0,0,0)),
+                    radial-gradient(2px 2px at 90px 40px, #3b78e7, rgba(0,0,0,0)),
+                    radial-gradient(2px 2px at 130px 80px, #4285f4, rgba(0,0,0,0));
+}
+
+.falling-stars {
+  @apply absolute inset-0;
+}
+
+.falling-stars::after {
+  content: "";
+  @apply absolute w-[100px] h-[1px];
+  background: linear-gradient(90deg, #fff, transparent);
+  animation: shooting-star 5s linear infinite;
+}
+
+:root[class~="light"] .falling-stars::after {
+  background: linear-gradient(90deg, #4285f4, transparent);
+}
+
+/* Blinking stars container */
+.blinking-stars {
+  @apply fixed inset-0 pointer-events-none z-[-1];
+}
+
+/* Blinking star */
+.blinking-star {
+  @apply absolute rounded-full bg-white;
+  width: 2px;
+  height: 2px;
+  animation: blinking 2s infinite ease-in-out;
+}
+
+:root[class~="light"] .blinking-star {
+  @apply bg-blue-400;
+}
+
+/* Random positions for blinking stars */
+@for $i from 1 through 50 {
+  .blinking-star:nth-child(#{$i}) {
+    top: calc(random(100) * 1%);
+    left: calc(random(100) * 1%);
+    animation-delay: calc(random(5) * 0.1s);
+    animation-duration: calc((random(10) * 0.5s) + 1s);
+  }
+}
+
+@keyframes twinkle {
+  0% { opacity: 0.3; }
+  50% { opacity: 1; }
+  100% { opacity: 0.3; }
+}
+
+@keyframes blinking {
+  0%, 100% { opacity: 0.2; transform: scale(0.8); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+@keyframes shooting-star {
+  0% {
+    transform: translateX(-100%) translateY(100px) rotate(-45deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(200%) translateY(-100px) rotate(-45deg);
+    opacity: 0;
+  }
+}
+
+/* Button styling for dark and light mode */
+.button-primary {
+  @apply bg-primary text-white hover:bg-primary/90 transition-colors;
+}
+
+.button-secondary {
+  @apply bg-secondary text-secondary-foreground hover:bg-secondary/80 transition-colors;
+}
+
+.button-outline {
+  @apply border border-border bg-transparent hover:bg-secondary/50 transition-colors;
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  a, button, [role="button"], .clickable {
+    @apply cursor-pointer;
+  }
+
+  body {
+    @apply cursor-auto;
+  }
+
+  .mobile-menu {
+    @apply fixed inset-x-0 top-[4.5rem] p-4 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800;
+  }
+
+  .container {
+    @apply px-4;
+  }
+
+  h1 {
+    @apply text-3xl;
+  }
+
+  .grid {
+    @apply gap-4;
+  }
+}
+
+/* Canvas styles */
+#canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+/* Animation utilities */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.5s ease-out forwards;
+}
+
+/* Theme transitions */
+* {
+  @apply transition-colors duration-300;
+}
+
+/* Footer positioning */
+#root {
+  @apply min-h-screen flex flex-col;
+}
+
+main {
+  @apply flex-grow;
+}
+
+.footer {
+  @apply w-full bg-white/90 dark:bg-gray-900/90 backdrop-blur-md 
+         border-t border-gray-200 dark:border-gray-800 
+         mt-auto py-6;
+}
+
+/* Tech stack icon enhancements */
+.tech-icon {
+  @apply relative rounded-lg p-3
+         bg-gray-100 dark:bg-gray-800
+         hover:bg-gray-200 dark:hover:bg-gray-700
+         transition-all duration-300
+         shadow-lg hover:shadow-xl
+         z-10;
+}
+
+.tech-icon img {
+  @apply w-full h-full object-contain
+         transition-all duration-300
+         filter dark:brightness-150
+         hover:scale-110
+         z-20;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Dark mode optimization */
+.dark {
+  color-scheme: dark;
+}
+
+/* Enhanced image hover effects */
+.group:hover .group-hover\:scale-110 {
+  transform: scale(1.1);
+}
+
+.group:hover .group-hover\:opacity-100 {
+  opacity: 1;
+}
+
+/* Video hover effects */
+video::-webkit-media-controls {
+  display: none !important;
+}
+
+video {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Mobile menu animation */
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.mobile-menu {
+  animation: slideDown 0.3s ease-out;
+}
