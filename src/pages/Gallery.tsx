@@ -80,6 +80,16 @@ const galleryImages = [
     size: 'large'
   },
   {
+    src: '/images/gallery/Village Man Cycling.jpg',
+    alt: 'Village Man Cycling',
+    size: 'medium'
+  },
+  {
+    src: '/public/images/gallery/Ferris wheel.jpg',
+    alt: 'Ferris wheel',
+    size: 'medium'
+  },
+  {
     src: '/images/gallery/jewellery banner.png',
     alt: 'Jewellery banner',
     size: 'large'
@@ -97,6 +107,11 @@ const galleryImages = [
   {
     src: '/images/gallery/Modern Food Menu.gif',
     alt: 'Modern Food Menu',
+    size: 'medium'
+  },
+  {
+    src: '/images/gallery/Hydroponic solution banner.png',
+    alt: 'Nature With Empty Rode',
     size: 'medium'
   },
   {
