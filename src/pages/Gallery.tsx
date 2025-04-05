@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import Navbar from '@/components/Navbar';
 import { Dialog, DialogContent } from '@/components/ui/dialog';
 import FooterDock from '@/components/FooterDock';
+import { ChevronLeft, ChevronRight, X } from 'lucide-react';
 
 // Gallery data - easier to add new photos
 const galleryImages = [
@@ -181,6 +182,8 @@ const Gallery = () => {
   const [activeImage, setActiveImage] = useState<string | null>(null);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
+
   // Function to determine grid layout classes based on image size
   const getGridClasses = (size: string) => {
     switch (size) {
@@ -193,6 +196,35 @@ const Gallery = () => {
         return 'col-span-1 row-span-1';
     }
   };
+
+    // Navigation functions for the preview mode
+    const goToNext = () => {
+      if (selectedIndex === null) return;
+      const nextIndex = (selectedIndex + 1) % galleryImages.length;
+      setSelectedIndex(nextIndex);
+      setSelectedImage(galleryImages[nextIndex].src);
+    };
+  
+    const goToPrevious = () => {
+      if (selectedIndex === null) return;
+      const prevIndex = (selectedIndex - 1 + galleryImages.length) % galleryImages.length;
+      setSelectedIndex(prevIndex);
+      setSelectedImage(galleryImages[prevIndex].src);
+    };
+  
+    // Function to open the image preview
+    const openImagePreview = (index: number) => {
+      setSelectedIndex(index);
+      setSelectedImage(galleryImages[index].src);
+    };
+  
+    // Handle dialog close
+    const handleCloseDialog = () => {
+      setSelectedImage(null);
+      setSelectedIndex(null);
+    };
+  
+  
 
   return (
     <div className="min-h-screen flex flex-col bg-white dark:bg-gray-900">
@@ -231,10 +263,10 @@ const Gallery = () => {
               key={index}
               className={`group relative transform transition-all duration-500 
                          hover:scale-[1.03] hover:z-10 overflow-hidden rounded-xl 
-                         ${getGridClasses(image.size)}`}
+                         ${getGridClasses(image.size)} cursor-pointer`}
               onMouseEnter={() => setActiveImage(image.src)}
               onMouseLeave={() => setActiveImage(null)}
-              onClick={() => setSelectedImage(image.src)}
+              onClick={() => openImagePreview(index)}
             >
               <div className="relative h-full w-full overflow-hidden rounded-xl shadow-xl">
                 <img
@@ -259,15 +291,70 @@ const Gallery = () => {
         </div>
       </div>
 
-      <Dialog open={!!selectedImage} onOpenChange={() => setSelectedImage(null)}>
-        <DialogContent className="max-w-[90vw] max-h-[90vh] p-0 overflow-hidden bg-transparent border-none">
+      {/* Fixed Image Preview Dialog */}
+      <Dialog open={!!selectedImage} onOpenChange={handleCloseDialog}>
+        <DialogContent 
+          className="max-w-[95vw] max-h-[95vh] p-0 bg-black/90 border-none" 
+          style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+        >
           {selectedImage && (
-            <img
-              src={selectedImage}
-              alt="Preview"
-              className="w-full h-full object-contain animate-fade-up"
-              onClick={(e) => e.stopPropagation()}
-            />
+            <div className="relative w-full h-full flex items-center justify-center p-4">
+              <img
+                src={selectedImage}
+                alt={selectedIndex !== null ? galleryImages[selectedIndex].alt : "Preview"}
+                style={{ 
+                  maxHeight: 'calc(95vh - 80px)', 
+                  maxWidth: '100%', 
+                  objectFit: 'contain', 
+                  display: 'block' 
+                }}
+              />
+              
+              {/* Image counter */}
+              {selectedIndex !== null && (
+                <div className="absolute top-4 left-1/2 transform -translate-x-1/2 text-white bg-black/60 px-3 py-1 rounded-full text-sm z-50">
+                  {selectedIndex + 1} / {galleryImages.length}
+                </div>
+              )}
+              
+              {/* Navigation buttons - positioned on sides */}
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  goToPrevious();
+                }}
+                className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 rounded-full h-12 w-12 z-50"
+                aria-label="Previous image"
+              >
+                <ChevronLeft className="h-8 w-8 text-white" />
+              </Button>
+              
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  goToNext();
+                }}
+                className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 rounded-full h-12 w-12 z-50"
+                aria-label="Next image"
+              >
+                <ChevronRight className="h-8 w-8 text-white" />
+              </Button>
+              
+              {/* Close button */}
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={handleCloseDialog}
+                className="absolute right-4 top-4 bg-black/50 hover:bg-black/70 rounded-full h-10 w-10 z-50"
+                aria-label="Close preview"
+              >
+                <X className="h-6 w-6 text-white" />
+              </Button>
+            </div>
           )}
         </DialogContent>
       </Dialog>
