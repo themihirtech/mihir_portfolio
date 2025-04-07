@@ -31,7 +31,7 @@ const FooterDock = () => {
 
   // Function to copy email to clipboard
   const handleCopyEmail = () => {
-    navigator.clipboard.writeText('contact@mihirmondal.com');
+    navigator.clipboard.writeText('mihirmondaltech@gmail.com');
     toast({
       title: "Email Copied!",
       description: "Email address has been copied to clipboard."

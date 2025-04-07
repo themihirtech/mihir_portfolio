@@ -7,7 +7,7 @@ import FooterDock from './FooterDock';
 const Contact = () => {
   // Function to copy email to clipboard
   const handleCopyEmail = () => {
-    navigator.clipboard.writeText('contact@mihirmondal.com');
+    navigator.clipboard.writeText('mihirmondaltech@gmail.com');
     toast({
       title: "Email Copied!",
       description: "Email address has been copied to clipboard."
@@ -50,7 +50,7 @@ const Contact = () => {
                 Schedule a Call
               </Button>
               <Button variant="secondary" size="lg" className="w-full md:w-auto px-8 py-6 text-lg flex items-center gap-2 hover:scale-105 transition-transform bg-white dark:bg-gray-800 text-gray-900 dark:text-white border border-gray-200 dark:border-gray-700" onClick={() => {
-              window.location.href = `mailto:contact@mihirmondal.com`;
+              window.location.href = `mailto:mihirmondaltech@gmail.com`;
             }}>
                 Send Message
               </Button>
