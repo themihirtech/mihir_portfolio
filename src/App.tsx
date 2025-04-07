@@ -11,6 +11,7 @@ import Gallery from "./pages/Gallery";
 import NotFound from "./pages/NotFound";
 import { renderCanvas } from "./components/ui/canvas";
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const ThemeContext = React.createContext({
   theme: 'dark',
   setTheme: (theme: string) => {},

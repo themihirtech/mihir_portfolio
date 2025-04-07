@@ -86,7 +86,7 @@ const galleryImages = [
     size: 'medium'
   },
   {
-    src: '/public/images/gallery/Ferris wheel.jpg',
+    src: '/images/gallery/Ferris wheel.jpg',
     alt: 'Ferris wheel',
     size: 'medium'
   },

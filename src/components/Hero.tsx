@@ -14,7 +14,7 @@ const techStack = [
   },
   {
     name: "photoshop",
-    icon: "/tech-stack/photoshop.png",
+    icon: "/images/tech-stack/photoshop.png",
     delay: 0.2,
   },
   {
